@@ -1,0 +1,14 @@
+{
+  "name": "aadhaar-forgery-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "convex:dev": "convex dev",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && uvicorn main:app --reload"
+  },
+  "dependencies": {
+    "convex": "^1.13.0"
+  }
+}
+

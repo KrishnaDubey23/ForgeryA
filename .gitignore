@@ -1,0 +1,25 @@
+
+.env.local.env
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+*.egg-info/
+dist/
+build/
+
+# Large data files - download from Roboflow instead
+dataset/
+backend/.venv/
+backend/__pycache__/
+frontend/node_modules/
+*.jpg
+*.png
+*.jpeg
+
+# Local development
+debug*.py
+test*.py
+storage/

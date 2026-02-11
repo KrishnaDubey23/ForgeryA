@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Baskerville:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --color-bg: #050814;
+  --color-surface: #0b1020;
+  --color-surface-alt: #101726;
+  --color-accent: #18ffd5;
+  --color-accent-soft: rgba(24, 255, 213, 0.14);
+  --color-danger: #ff3366;
+  --color-text-primary: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --scanline-color: rgba(255, 255, 255, 0.02);
+}
+
+body {
+  margin: 0;
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.lab-grid-bg {
+  position: relative;
+  background-image: linear-gradient(
+      to right,
+      rgba(148, 163, 184, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(148, 163, 184, 0.12) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+}
+
+.lab-grid-bg::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    var(--scanline-color) 3px
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0.6;
+}
+
+.lab-panel {
+  background: radial-gradient(circle at top left, #1f2933, transparent 55%),
+    radial-gradient(circle at bottom right, #020617, transparent 60%),
+    var(--color-surface);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 45px 80px rgba(15, 23, 42, 0.9);
+}
+
+.lab-glow-ring {
+  box-shadow:
+    0 0 0 1px rgba(24, 255, 213, 0.35),
+    0 0 32px rgba(24, 255, 213, 0.35);
+}
+
+.lab-severity-meter-track {
+  background: linear-gradient(
+    90deg,
+    #22c55e 0%,
+    #eab308 35%,
+    #f97316 65%,
+    #ef4444 100%
+  );
+  filter: saturate(1.4);
+}
+
+.lab-noir-heading {
+  font-family: "Playfair Display", "Libre Baskerville", serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lab-mono-label {
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
